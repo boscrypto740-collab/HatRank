@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="id">
+DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -117,46 +117,24 @@
   .level-badge { display: inline-block; margin-top: 16px; padding: 6px 20px; border: 1px solid; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; }
   .username-display { color: var(--muted); font-size: 13px; margin-top: 10px; }
 
-  /* ── Action Buttons ─────────────────────────────── */
-  .action-bar {
-    display: flex; gap: 12px; justify-content: center;
-    margin-top: 28px; flex-wrap: wrap;
-  }
-
+  /* Action Buttons */
+  .action-bar { display: flex; gap: 12px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
   .action-btn {
     display: inline-flex; align-items: center; gap: 9px;
     padding: 13px 26px; border: none; border-radius: 3px;
     font-family: 'Bebas Neue', sans-serif; font-size: 15px;
     letter-spacing: 0.12em; cursor: pointer;
     transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
-    position: relative; overflow: hidden; min-width: 172px;
-    justify-content: center;
+    position: relative; overflow: hidden; min-width: 172px; justify-content: center;
   }
-
-  .action-btn::before {
-    content: ''; position: absolute; inset: 0;
-    background: rgba(255,255,255,0.06); opacity: 0;
-    transition: opacity 0.2s;
-  }
+  .action-btn::before { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,0.06); opacity: 0; transition: opacity 0.2s; }
   .action-btn:hover::before { opacity: 1; }
   .action-btn:active { transform: scale(0.96); }
   .action-btn:disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
-
-  .btn-share {
-    background: #000; color: #fff; border: 1px solid #2a2a2a;
-  }
-  .btn-share:hover {
-    border-color: #444;
-    box-shadow: 0 0 0 1px #333, 0 6px 24px rgba(0,0,0,0.5);
-  }
-
-  .btn-download {
-    background: var(--accent); color: #0a0a0f;
-  }
-  .btn-download:hover {
-    background: #ffd966;
-    box-shadow: 0 0 28px rgba(245,200,66,0.4);
-  }
+  .btn-share { background: #000; color: #fff; border: 1px solid #2a2a2a; }
+  .btn-share:hover { border-color: #444; box-shadow: 0 0 0 1px #333, 0 6px 24px rgba(0,0,0,0.5); }
+  .btn-download { background: var(--accent); color: #0a0a0f; }
+  .btn-download:hover { background: #ffd966; box-shadow: 0 0 28px rgba(245,200,66,0.4); }
 
   /* Toast */
   .toast {
@@ -196,7 +174,7 @@
   .tag:hover { border-color: var(--accent); color: var(--accent); }
 
   .score-row { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-  .score-name { width: 140px; font-size: 12px; color: var(--muted); flex-shrink: 0; }
+  .score-name { width: 160px; font-size: 12px; color: var(--muted); flex-shrink: 0; }
   .score-dots { display: flex; gap: 5px; flex: 1; }
   .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--border); transition: background 0.3s; }
   .dot.lit { background: var(--accent); box-shadow: 0 0 6px var(--accent); }
@@ -235,33 +213,33 @@
   <div class="search-wrapper">
     <div class="search-box">
       <span class="at-symbol">@</span>
-      <input type="text" id="usernameInput" placeholder="masukkan username X..." maxlength="50" autocomplete="off" spellcheck="false" />
-      <button class="analyze-btn" id="analyzeBtn" onclick="startAnalysis()">ANALISA</button>
+      <input type="text" id="usernameInput" placeholder="enter X username..." maxlength="50" autocomplete="off" spellcheck="false" />
+      <button class="analyze-btn" id="analyzeBtn" onclick="startAnalysis()">ANALYZE</button>
     </div>
-    <p class="hint">// tekan Enter atau klik ANALISA untuk memulai</p>
+    <p class="hint">// press Enter or click ANALYZE to get started</p>
   </div>
 
   <!-- Legend -->
   <div id="legendSection">
-    <p class="section-header">LEVEL BADGE</p>
+    <p class="section-header">BADGE LEVELS</p>
     <div class="legend">
-      <div class="legend-card"><span class="legend-hat">🎩</span><div><div class="legend-name">PHANTOM HAT</div><div class="legend-desc">Ghost mode. Aktivitas sangat minim, hampir tidak terdeteksi.</div></div></div>
-      <div class="legend-card"><span class="legend-hat">🧢</span><div><div class="legend-name">ROOKIE CAP</div><div class="legend-desc">Pemula. Masih menjajaki platform, interaksi sporadis.</div></div></div>
-      <div class="legend-card"><span class="legend-hat">👒</span><div><div class="legend-name">STRAW HAT</div><div class="legend-desc">Aktif tapi santai. Konsisten namun tidak agresif.</div></div></div>
-      <div class="legend-card"><span class="legend-hat">🪖</span><div><div class="legend-name">FIELD HAT</div><div class="legend-desc">Pejuang lapangan. Sering berdebat & engaged tinggi.</div></div></div>
-      <div class="legend-card"><span class="legend-hat">🎓</span><div><div class="legend-name">SCHOLAR HAT</div><div class="legend-desc">Thought leader. Konten berkualitas, followers setia.</div></div></div>
-      <div class="legend-card"><span class="legend-hat">👑</span><div><div class="legend-name">CROWN HAT</div><div class="legend-desc">Elite tier. Pengaruh masif, viral consistency tinggi.</div></div></div>
+      <div class="legend-card"><span class="legend-hat">🎩</span><div><div class="legend-name">PHANTOM HAT</div><div class="legend-desc">Ghost mode. Barely any activity, almost undetectable.</div></div></div>
+      <div class="legend-card"><span class="legend-hat">🧢</span><div><div class="legend-name">ROOKIE CAP</div><div class="legend-desc">Just starting out. Exploring the platform, sporadic posts.</div></div></div>
+      <div class="legend-card"><span class="legend-hat">👒</span><div><div class="legend-name">STRAW HAT</div><div class="legend-desc">Active but relaxed. Consistent without being aggressive.</div></div></div>
+      <div class="legend-card"><span class="legend-hat">🪖</span><div><div class="legend-name">FIELD HAT</div><div class="legend-desc">Battle-ready. Frequently debates & highly engaged.</div></div></div>
+      <div class="legend-card"><span class="legend-hat">🎓</span><div><div class="legend-name">SCHOLAR HAT</div><div class="legend-desc">Thought leader. Quality content, loyal following.</div></div></div>
+      <div class="legend-card"><span class="legend-hat">👑</span><div><div class="legend-name">CROWN HAT</div><div class="legend-desc">Elite tier. Massive influence, consistently viral.</div></div></div>
     </div>
   </div>
 
   <!-- Loading -->
   <div class="loading" id="loading">
     <ul class="loading-steps">
-      <li class="step" data-step="0"><span class="step-dot"></span> Menghubungi agen intelijen X...</li>
-      <li class="step" data-step="1"><span class="step-dot"></span> Memindai riwayat aktivitas akun...</li>
-      <li class="step" data-step="2"><span class="step-dot"></span> Menganalisa pola interaksi & engagement...</li>
-      <li class="step" data-step="3"><span class="step-dot"></span> Menghitung skor kepribadian digital...</li>
-      <li class="step" data-step="4"><span class="step-dot"></span> Menentukan level badge topi...</li>
+      <li class="step" data-step="0"><span class="step-dot"></span> Connecting to X intelligence network...</li>
+      <li class="step" data-step="1"><span class="step-dot"></span> Scanning account activity history...</li>
+      <li class="step" data-step="2"><span class="step-dot"></span> Analyzing interaction & engagement patterns...</li>
+      <li class="step" data-step="3"><span class="step-dot"></span> Calculating digital personality score...</li>
+      <li class="step" data-step="4"><span class="step-dot"></span> Determining hat badge level...</li>
     </ul>
   </div>
 
@@ -275,7 +253,6 @@
       <div class="level-badge" id="levelBadge">LEVEL 1 / 6</div>
       <div class="username-display" id="usernameDisplay">@username</div>
 
-      <!-- ── Action Buttons ── -->
       <div class="action-bar">
         <button class="action-btn btn-share" id="shareBtn" onclick="shareOnX()">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -297,38 +274,35 @@
     <div class="stats-grid" id="statsGrid"></div>
 
     <div class="section">
-      <div class="section-title">Distribusi Aktivitas</div>
+      <div class="section-title">Activity Breakdown</div>
       <div id="activityBars"></div>
     </div>
 
     <div class="section">
-      <div class="section-title">Profil Kepribadian Digital</div>
+      <div class="section-title">Digital Personality Profile</div>
       <div id="personalityScores"></div>
     </div>
 
     <div class="section">
-      <div class="section-title">Label Karakteristik</div>
+      <div class="section-title">Characteristic Labels</div>
       <div class="tags-wrap" id="tagsList"></div>
     </div>
 
     <div class="section">
-      <div class="section-title">Analisa Mendalam</div>
+      <div class="section-title">Deep Analysis</div>
       <div id="aiAnalysisText" style="font-size:13px; line-height:1.9; color: var(--muted);"></div>
       <div style="margin-top:12px; font-size:10px; color: #3a3a5a; letter-spacing:0.08em;">// GENERATED BY HATRANK INTELLIGENCE ENGINE</div>
     </div>
 
     <div class="analysis-footer">
-      HATRANK v1.0 — Analisa diperbarui berdasarkan aktivitas terkini akun X<br>
-      Hasil analisa bersifat deterministik: username yang sama = data yang sama selama tidak ada aktivitas baru
+      HATRANK v1.0 — Analysis updates based on latest X account activity<br>
+      Results are deterministic: same username = same data as long as no new activity is detected
     </div>
   </div>
 
 </div>
 
-<!-- Hidden canvas for badge PNG generation -->
 <canvas id="badgeCanvas"></canvas>
-
-<!-- Toast notification -->
 <div class="toast" id="toast"></div>
 
 <script>
@@ -338,24 +312,24 @@
 
   // ── Hat definitions ──────────────────────────────────
   const HATS = [
-    { emoji:'🎩', title:'PHANTOM HAT',  subtitle:'The Silent Observer',   level:1, color:'#7a7aaa', hexColor:'7a7aaa', glow:'rgba(122,122,170,0.2)', minScore:0,  maxScore:15,
+    { emoji:'🎩', title:'PHANTOM HAT',  subtitle:'The Silent Observer',   level:1, color:'#7a7aaa', glow:'rgba(122,122,170,0.2)', minScore:0,  maxScore:15,
       tags:['Silent Watcher','Ghost Mode','Low Presence','Lurker','Minimal Trace'],
-      archetype:'Bayangan digital. Akun ini hadir namun hampir tidak meninggalkan jejak. Mungkin akun baru, akun backup, atau seseorang yang memilih untuk mengamati dari balik tirai.' },
-    { emoji:'🧢', title:'ROOKIE CAP',   subtitle:'The Learning Explorer', level:2, color:'#5ba8e0', hexColor:'5ba8e0', glow:'rgba(91,168,224,0.2)',  minScore:16, maxScore:32,
+      archetype:'A digital shadow. This account exists but leaves almost no trace. Perhaps a new account, a backup, or someone who prefers to observe from behind the curtain.' },
+    { emoji:'🧢', title:'ROOKIE CAP',   subtitle:'The Learning Explorer', level:2, color:'#5ba8e0', glow:'rgba(91,168,224,0.2)',  minScore:16, maxScore:32,
       tags:['Still Learning','Early Stage','Sporadic Posts','Growing','Experimenting'],
-      archetype:'Masih menemukan ritme. Akun ini mulai memahami cara kerja platform — interaksinya sporadis namun ada sinyal pertumbuhan yang menjanjikan.' },
-    { emoji:'👒', title:'STRAW HAT',    subtitle:'The Casual Regular',    level:3, color:'#d4a843', hexColor:'d4a843', glow:'rgba(212,168,67,0.2)',  minScore:33, maxScore:50,
+      archetype:'Still finding their rhythm. This account is beginning to understand how the platform works — sporadic interactions but promising signals of growth.' },
+    { emoji:'👒', title:'STRAW HAT',    subtitle:'The Casual Regular',    level:3, color:'#d4a843', glow:'rgba(212,168,67,0.2)',  minScore:33, maxScore:50,
       tags:['Steady Pace','Casual User','Consistent','Community Member','Balanced'],
-      archetype:'Pengguna setia yang santai. Tidak mencoba viral, tidak menghilang. Hadir secara konsisten, berinteraksi dengan komunitas, dan membangun koneksi organik.' },
-    { emoji:'🪖', title:'FIELD HAT',    subtitle:'The Engaged Fighter',   level:4, color:'#7bc96a', hexColor:'7bc96a', glow:'rgba(123,201,106,0.2)', minScore:51, maxScore:68,
+      archetype:'The reliable, laid-back regular. Not chasing virality, not disappearing. Consistently present, engaging with the community, building organic connections.' },
+    { emoji:'🪖', title:'FIELD HAT',    subtitle:'The Engaged Fighter',   level:4, color:'#7bc96a', glow:'rgba(123,201,106,0.2)', minScore:51, maxScore:68,
       tags:['High Engager','Debate Ready','Opinion Leader','Vocal','Trendsetter'],
-      archetype:'Pejuang di medan diskusi. Akun ini tidak ragu menyuarakan pendapat, sering masuk ke trending topic, dan memiliki basis pengikut yang aktif berinteraksi balik.' },
-    { emoji:'🎓', title:'SCHOLAR HAT',  subtitle:'The Thought Leader',    level:5, color:'#c084fc', hexColor:'c084fc', glow:'rgba(192,132,252,0.2)', minScore:69, maxScore:84,
+      archetype:'A fighter in the arena of discourse. This account is not afraid to voice opinions, frequently enters trending conversations, and has a following that actively engages back.' },
+    { emoji:'🎓', title:'SCHOLAR HAT',  subtitle:'The Thought Leader',    level:5, color:'#c084fc', glow:'rgba(192,132,252,0.2)', minScore:69, maxScore:84,
       tags:['Thought Leader','Quality Content','Trusted Voice','Niche Authority','High Retention'],
-      archetype:'Otoritas di bidangnya. Konten yang diposting bukan sekadar opini — ada substansi. Follower datang bukan hanya untuk hiburan tapi untuk insight yang bernilai.' },
-    { emoji:'👑', title:'CROWN HAT',    subtitle:'The Digital Royalty',   level:6, color:'#f5c842', hexColor:'f5c842', glow:'rgba(245,200,66,0.3)',  minScore:85, maxScore:100,
+      archetype:'An authority in their domain. The content posted goes beyond opinion — there is real substance. Followers come not just for entertainment but for genuinely valuable insights.' },
+    { emoji:'👑', title:'CROWN HAT',    subtitle:'The Digital Royalty',   level:6, color:'#f5c842', glow:'rgba(245,200,66,0.3)',  minScore:85, maxScore:100,
       tags:['Elite Tier','Viral Machine','Mass Influence','Top 1%','Cultural Driver'],
-      archetype:'Royalti digital. Pengaruhnya melampaui platform — merambah ke percakapan budaya yang lebih luas. Setiap tweet punya bobot, setiap repost menciptakan gelombang.' },
+      archetype:'Digital royalty. Their influence extends beyond the platform — seeping into broader cultural conversations. Every tweet carries weight, every repost creates ripples.' },
   ];
 
   // ── Helpers ───────────────────────────────────────────
@@ -397,23 +371,23 @@
       raw < 0.90 ? 69+(raw-0.75)/0.15*15 :
                    85+(raw-0.90)/0.1*15
     );
-    const hat       = HATS.find(h => score >= h.minScore && score <= h.maxScore) || HATS[2];
-    const followers = Math.floor(rand() * 40000 + 50);
-    const following = Math.floor(rand() * 3000 + 20);
-    const tweets    = Math.floor(rand() * 15000 + 10);
-    const likes     = Math.floor(rand() * 80000 + 5);
-    const joinYear  = 2008 + Math.floor(rand() * 16);
-    const engRate   = (rand() * 8 + 0.2).toFixed(1);
-    const replyPct  = Math.floor(rand() * 40 + 5);
-    const retweetPct= Math.floor(rand() * 30 + 5);
-    const likePct   = Math.floor(rand() * 40 + 10);
-    const tweetPct  = Math.max(5, 100 - replyPct - retweetPct - likePct);
+    const hat        = HATS.find(h => score >= h.minScore && score <= h.maxScore) || HATS[2];
+    const followers  = Math.floor(rand() * 40000 + 50);
+    const following  = Math.floor(rand() * 3000 + 20);
+    const tweets     = Math.floor(rand() * 15000 + 10);
+    const likes      = Math.floor(rand() * 80000 + 5);
+    const joinYear   = 2008 + Math.floor(rand() * 16);
+    const engRate    = (rand() * 8 + 0.2).toFixed(1);
+    const replyPct   = Math.floor(rand() * 40 + 5);
+    const retweetPct = Math.floor(rand() * 30 + 5);
+    const likePct    = Math.floor(rand() * 40 + 10);
+    const tweetPct   = Math.max(5, 100 - replyPct - retweetPct - likePct);
     const personality = {
-      'Kreativitas Konten':  Math.min(9, Math.max(1, Math.floor(rand()*4+hat.level))),
-      'Konsistensi Posting': Math.min(9, Math.max(1, Math.floor(rand()*4+hat.level-1))),
-      'Kualitas Interaksi':  Math.min(9, Math.max(1, Math.floor(rand()*3+hat.level))),
-      'Pengaruh Jaringan':   Math.min(9, Math.max(1, Math.floor(rand()*3+hat.level-1))),
-      'Kontroversialitas':   Math.min(9, Math.max(1, Math.floor(rand()*6+1))),
+      'Content Creativity':   Math.min(9, Math.max(1, Math.floor(rand()*4+hat.level))),
+      'Posting Consistency':  Math.min(9, Math.max(1, Math.floor(rand()*4+hat.level-1))),
+      'Interaction Quality':  Math.min(9, Math.max(1, Math.floor(rand()*3+hat.level))),
+      'Network Influence':    Math.min(9, Math.max(1, Math.floor(rand()*3+hat.level-1))),
+      'Controversiality':     Math.min(9, Math.max(1, Math.floor(rand()*6+1))),
     };
     return { hat, score, followers, following, tweets, likes, joinYear, engRate, replyPct, retweetPct, likePct, tweetPct, personality };
   }
@@ -458,25 +432,25 @@
     bt.textContent = hat.title;
     document.getElementById('badgeSubtitle').textContent = hat.subtitle;
     const lb = document.getElementById('levelBadge');
-    lb.textContent = `LEVEL ${hat.level} / 6  ·  SKOR ${score}/100`;
+    lb.textContent = `LEVEL ${hat.level} / 6  ·  SCORE ${score}/100`;
     lb.style.borderColor = hat.color;
     lb.style.color = hat.color;
     document.getElementById('usernameDisplay').textContent = `@${username}`;
 
     document.getElementById('statsGrid').innerHTML = [
-      { label:'FOLLOWERS',       value: formatNum(followers), sub:'total pengikut' },
-      { label:'FOLLOWING',       value: formatNum(following), sub:'akun diikuti' },
-      { label:'TOTAL TWEETS',    value: formatNum(tweets),    sub:'sejak bergabung' },
-      { label:'LIKES DIBERIKAN', value: formatNum(likes),     sub:'total interaksi' },
-      { label:'ENG. RATE',       value: engRate+'%',          sub:'rata-rata/post' },
-      { label:'BERGABUNG',       value: joinYear,              sub:`${new Date().getFullYear()-joinYear} tahun di X` },
+      { label:'FOLLOWERS',     value: formatNum(followers), sub:'total followers' },
+      { label:'FOLLOWING',     value: formatNum(following), sub:'accounts followed' },
+      { label:'TOTAL TWEETS',  value: formatNum(tweets),    sub:'since joining' },
+      { label:'LIKES GIVEN',   value: formatNum(likes),     sub:'total interactions' },
+      { label:'ENG. RATE',     value: engRate+'%',          sub:'avg per post' },
+      { label:'JOINED',        value: joinYear,              sub:`${new Date().getFullYear()-joinYear} years on X` },
     ].map(s=>`<div class="stat-card"><div class="stat-label">${s.label}</div><div class="stat-value">${s.value}</div><div class="stat-sub">${s.sub}</div></div>`).join('');
 
     document.getElementById('activityBars').innerHTML = [
-      { label:'Original Tweets',   pct: tweetPct },
-      { label:'Replies / Diskusi', pct: replyPct },
-      { label:'Retweets',          pct: retweetPct },
-      { label:'Quote Tweets',      pct: likePct },
+      { label:'Original Tweets', pct: tweetPct },
+      { label:'Replies',         pct: replyPct },
+      { label:'Retweets',        pct: retweetPct },
+      { label:'Quote Tweets',    pct: likePct },
     ].map(a=>`<div class="bar-row"><span class="bar-label">${a.label}</span><div class="bar-track"><div class="bar-fill" data-pct="${a.pct}"></div></div><span class="bar-pct">${a.pct}%</span></div>`).join('');
     setTimeout(() => document.querySelectorAll('.bar-fill').forEach(b => b.style.width = b.dataset.pct+'%'), 100);
 
@@ -485,24 +459,24 @@
       <div class="score-dots">${Array.from({length:9},(_,i)=>`<div class="dot ${i<val?(i<6?'lit':'half-lit'):''}"></div>`).join('')}</div></div>`).join('');
 
     document.getElementById('tagsList').innerHTML = hat.tags.map(t=>`<span class="tag">${t}</span>`).join('');
-    document.getElementById('aiAnalysisText').textContent = 'Memuat analisa mendalam...';
+    document.getElementById('aiAnalysisText').textContent = 'Loading deep analysis...';
     document.getElementById('results').classList.add('active');
     document.getElementById('analyzeBtn').disabled = false;
   }
 
   async function fetchAIAnalysis(username, profile) {
     const { hat, score, followers, tweets, engRate } = profile;
-    const prompt = `Kamu adalah HatRank Intelligence Engine — analis kepribadian digital berbasis aktivitas X (Twitter).
+    const prompt = `You are the HatRank Intelligence Engine — a digital personality analyst powered by X (Twitter) account activity.
 
-Buatlah analisa singkat namun tajam tentang akun X berikut dalam 3-4 kalimat bahasa Indonesia yang mengalir natural (bukan bullet point):
+Write a sharp, concise analysis of the following X account in 3-4 sentences of natural, flowing English (no bullet points):
 
 - Username: @${username}
 - Badge: ${hat.title} (${hat.subtitle}) — Level ${hat.level}/6
-- Skor aktivitas: ${score}/100
+- Activity score: ${score}/100
 - Followers: ${formatNum(followers)}, Total tweets: ${formatNum(tweets)}, Engagement rate: ${engRate}%
-- Arketipe: ${hat.archetype}
+- Archetype: ${hat.archetype}
 
-Gaya penulisan: jurnalistik, sedikit puitis, penuh wawasan. Jangan sebut "HatRank" dalam teks.`;
+Writing style: journalistic, slightly poetic, insightful. Do not mention "HatRank" in the text.`;
     try {
       const res  = await fetch("https://api.anthropic.com/v1/messages", {
         method:"POST", headers:{"Content-Type":"application/json"},
@@ -515,172 +489,101 @@ Gaya penulisan: jurnalistik, sedikit puitis, penuh wawasan. Jangan sebut "HatRan
     }
   }
 
-  // ══════════════════════════════════════════════════════
-  //  BADGE IMAGE GENERATOR  (Canvas API)
-  // ══════════════════════════════════════════════════════
+  // ── Badge Canvas Generator ────────────────────────────
   function buildBadgeCanvas() {
     const { hat, score, followers, tweets, engRate } = currentProfile;
     const W = 1000, H = 520;
-
     const canvas = document.getElementById('badgeCanvas');
-    canvas.width  = W;
-    canvas.height = H;
+    canvas.width = W; canvas.height = H;
     const ctx = canvas.getContext('2d');
 
-    // ── Background ──────────────────────────────────────
-    ctx.fillStyle = '#0a0a0f';
-    ctx.fillRect(0, 0, W, H);
-
-    // Dot grid
+    ctx.fillStyle = '#0a0a0f'; ctx.fillRect(0, 0, W, H);
     ctx.fillStyle = 'rgba(255,255,255,0.025)';
     for (let x = 20; x < W; x += 44)
       for (let y = 20; y < H; y += 44)
         { ctx.beginPath(); ctx.arc(x, y, 1, 0, Math.PI*2); ctx.fill(); }
 
-    // Radial glow behind emoji zone
     const rg = ctx.createRadialGradient(W/2, 155, 0, W/2, 155, 220);
-    rg.addColorStop(0, hat.color + '40');
-    rg.addColorStop(1, 'transparent');
-    ctx.fillStyle = rg;
-    ctx.fillRect(0, 0, W, H);
+    rg.addColorStop(0, hat.color + '40'); rg.addColorStop(1, 'transparent');
+    ctx.fillStyle = rg; ctx.fillRect(0, 0, W, H);
 
-    // Corner accent lines
-    const accentAlpha = hat.color + 'cc';
     const drawCorner = (x, y, dx, dy) => {
-      ctx.strokeStyle = accentAlpha; ctx.lineWidth = 2;
+      ctx.strokeStyle = hat.color + 'cc'; ctx.lineWidth = 2;
       ctx.beginPath(); ctx.moveTo(x, y+dy*22); ctx.lineTo(x, y); ctx.lineTo(x+dx*22, y); ctx.stroke();
     };
-    drawCorner(24, 24, 1, 1); drawCorner(W-24, 24, -1, 1);
-    drawCorner(24, H-24, 1, -1); drawCorner(W-24, H-24, -1, -1);
+    drawCorner(24,24,1,1); drawCorner(W-24,24,-1,1); drawCorner(24,H-24,1,-1); drawCorner(W-24,H-24,-1,-1);
 
-    // Top accent bar
     const tg = ctx.createLinearGradient(0, 0, W, 0);
-    tg.addColorStop(0, 'transparent');
-    tg.addColorStop(0.25, hat.color);
-    tg.addColorStop(0.75, hat.color);
-    tg.addColorStop(1, 'transparent');
+    tg.addColorStop(0,'transparent'); tg.addColorStop(0.25,hat.color); tg.addColorStop(0.75,hat.color); tg.addColorStop(1,'transparent');
     ctx.strokeStyle = tg; ctx.lineWidth = 3;
-    ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(W, 0); ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(0, H); ctx.lineTo(W, H); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0,0); ctx.lineTo(W,0); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0,H); ctx.lineTo(W,H); ctx.stroke();
 
-    // ── Hat emoji ────────────────────────────────────────
-    ctx.font = '120px serif';
-    ctx.textAlign = 'center';
+    ctx.font = '120px serif'; ctx.textAlign = 'center';
     ctx.shadowColor = hat.color; ctx.shadowBlur = 32;
-    ctx.fillText(hat.emoji, W/2, 168);
-    ctx.shadowBlur = 0;
+    ctx.fillText(hat.emoji, W/2, 168); ctx.shadowBlur = 0;
 
-    // ── Badge title ──────────────────────────────────────
     ctx.shadowColor = hat.color; ctx.shadowBlur = 20;
     ctx.fillStyle = hat.color;
     ctx.font = 'bold 58px "Bebas Neue", Impact, Arial Black, sans-serif';
-    ctx.letterSpacing = '4px';
-    ctx.fillText(hat.title, W/2, 240);
-    ctx.shadowBlur = 0;
+    ctx.fillText(hat.title, W/2, 240); ctx.shadowBlur = 0;
 
-    // ── Subtitle ─────────────────────────────────────────
-    ctx.fillStyle = '#888899';
-    ctx.font = 'italic 19px Georgia, "Times New Roman", serif';
+    ctx.fillStyle = '#888899'; ctx.font = 'italic 19px Georgia, serif';
     ctx.fillText(hat.subtitle, W/2, 270);
 
-    // ── Level pill ───────────────────────────────────────
-    const pillTxt = `LEVEL ${hat.level} / 6   ·   SKOR ${score} / 100`;
+    const pillTxt = `LEVEL ${hat.level} / 6   ·   SCORE ${score} / 100`;
     ctx.font = '12px "Courier New", monospace';
-    const pillW = ctx.measureText(pillTxt).width + 44;
-    const pillX = W/2 - pillW/2, pillY = 284;
-    ctx.strokeStyle = hat.color + 'bb'; ctx.lineWidth = 1;
-    ctx.strokeRect(pillX, pillY, pillW, 26);
-    ctx.fillStyle = hat.color;
-    ctx.fillText(pillTxt, W/2, pillY + 17);
+    const pillW = ctx.measureText(pillTxt).width + 44, pillX = W/2 - pillW/2, pillY = 284;
+    ctx.strokeStyle = hat.color + 'bb'; ctx.lineWidth = 1; ctx.strokeRect(pillX, pillY, pillW, 26);
+    ctx.fillStyle = hat.color; ctx.fillText(pillTxt, W/2, pillY + 17);
 
-    // ── Level progress bar ───────────────────────────────
-    const barW = 280, barH = 6;
-    const barX = W/2 - barW/2, barY = 320;
-    ctx.fillStyle = '#1e1e2e';
-    ctx.fillRect(barX, barY, barW, barH);
-    const fillLen = (hat.level / 6) * barW;
-    const barGrad = ctx.createLinearGradient(barX, 0, barX + barW, 0);
+    const barW = 280, barH = 6, barX = W/2 - barW/2, barY = 320;
+    ctx.fillStyle = '#1e1e2e'; ctx.fillRect(barX, barY, barW, barH);
+    const barGrad = ctx.createLinearGradient(barX, 0, barX+barW, 0);
     barGrad.addColorStop(0, hat.color); barGrad.addColorStop(1, '#e8834a');
-    ctx.fillStyle = barGrad;
-    ctx.fillRect(barX, barY, fillLen, barH);
-    // Segment ticks
+    ctx.fillStyle = barGrad; ctx.fillRect(barX, barY, (hat.level/6)*barW, barH);
     ctx.strokeStyle = '#0a0a0f'; ctx.lineWidth = 2;
-    for (let i = 1; i < 6; i++) {
-      const tx = barX + (barW/6)*i;
-      ctx.beginPath(); ctx.moveTo(tx, barY); ctx.lineTo(tx, barY+barH); ctx.stroke();
-    }
+    for (let i = 1; i < 6; i++) { const tx = barX+(barW/6)*i; ctx.beginPath(); ctx.moveTo(tx,barY); ctx.lineTo(tx,barY+barH); ctx.stroke(); }
 
-    // ── Username ─────────────────────────────────────────
-    ctx.fillStyle = '#e8e8f0';
-    ctx.font = '22px "Courier New", monospace';
+    ctx.fillStyle = '#e8e8f0'; ctx.font = '22px "Courier New", monospace';
     ctx.fillText(`@${currentUsername}`, W/2, 355);
 
-    // ── Divider ───────────────────────────────────────────
     ctx.strokeStyle = 'rgba(255,255,255,0.07)'; ctx.lineWidth = 1;
-    ctx.beginPath(); ctx.moveTo(60, 375); ctx.lineTo(W-60, 375); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(60,375); ctx.lineTo(W-60,375); ctx.stroke();
 
-    // ── Stats ────────────────────────────────────────────
-    const stats = [
-      { label:'FOLLOWERS',  value: formatNum(followers) },
-      { label:'TWEETS',     value: formatNum(tweets) },
-      { label:'ENG. RATE',  value: engRate+'%' },
-    ];
-    const colW = (W - 120) / 3;
+    const stats = [{label:'FOLLOWERS',value:formatNum(followers)},{label:'TWEETS',value:formatNum(tweets)},{label:'ENG. RATE',value:engRate+'%'}];
+    const colW = (W-120)/3;
     stats.forEach((s, i) => {
-      const cx = 60 + colW*i + colW/2;
-      ctx.fillStyle = '#e8e8f0';
-      ctx.font = 'bold 30px "Bebas Neue", Impact, sans-serif';
-      ctx.fillText(s.value, cx, 412);
-      ctx.fillStyle = '#5a5a7a';
-      ctx.font = '11px "Courier New", monospace';
-      ctx.fillText(s.label, cx, 430);
+      const cx = 60+colW*i+colW/2;
+      ctx.fillStyle = '#e8e8f0'; ctx.font = 'bold 30px "Bebas Neue", Impact, sans-serif'; ctx.fillText(s.value, cx, 412);
+      ctx.fillStyle = '#5a5a7a'; ctx.font = '11px "Courier New", monospace'; ctx.fillText(s.label, cx, 430);
     });
+    [1,2].forEach(i => { const lx = 60+colW*i; ctx.strokeStyle='rgba(255,255,255,0.05)'; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(lx,385); ctx.lineTo(lx,440); ctx.stroke(); });
 
-    // Col dividers
-    ctx.strokeStyle = 'rgba(255,255,255,0.05)'; ctx.lineWidth = 1;
-    [1,2].forEach(i => {
-      const lx = 60 + colW*i;
-      ctx.beginPath(); ctx.moveTo(lx, 385); ctx.lineTo(lx, 440); ctx.stroke();
-    });
-
-    // ── Tags ─────────────────────────────────────────────
-    ctx.fillStyle = '#3a3a5a';
-    ctx.font = '11px "Courier New", monospace';
+    ctx.fillStyle = '#3a3a5a'; ctx.font = '11px "Courier New", monospace';
     ctx.fillText(hat.tags.slice(0,4).map(t=>'#'+t.replace(/\s+/g,'')).join('   '), W/2, 466);
-
-    // ── Branding ─────────────────────────────────────────
-    ctx.fillStyle = '#2a2a4a';
-    ctx.font = '11px "Courier New", monospace';
-    ctx.fillText('hatrank.io', W - 70, H - 14);
+    ctx.fillStyle = '#2a2a4a'; ctx.font = '11px "Courier New", monospace';
+    ctx.fillText('hatrank.io', W-70, H-14);
 
     return canvas;
   }
 
-  // ══════════════════════════════════════════════════════
-  //  DOWNLOAD BADGE
-  // ══════════════════════════════════════════════════════
+  // ── Download Badge ────────────────────────────────────
   function downloadBadge() {
-    if (!currentProfile) { showToast('⚠️ Analisa dulu sebuah username', true); return; }
-
+    if (!currentProfile) { showToast('⚠️ Analyze a username first', true); return; }
     const btn = document.getElementById('downloadBtn');
     btn.disabled = true;
     btn.innerHTML = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> GENERATING...`;
-
-    // Small delay so UI updates before canvas work
     setTimeout(() => {
       try {
         const canvas = buildBadgeCanvas();
         const filename = `hatrank_${currentUsername}_${currentProfile.hat.title.toLowerCase().replace(/\s+/g,'-')}.png`;
         const link = document.createElement('a');
-        link.download = filename;
-        link.href = canvas.toDataURL('image/png', 1.0);
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        showToast('✓ Badge berhasil diunduh!');
+        link.download = filename; link.href = canvas.toDataURL('image/png', 1.0);
+        document.body.appendChild(link); link.click(); document.body.removeChild(link);
+        showToast('✓ Badge downloaded successfully!');
       } catch(err) {
-        showToast('⚠️ Gagal mengunduh badge', true);
-        console.error(err);
+        showToast('⚠️ Failed to generate badge', true);
       } finally {
         btn.disabled = false;
         btn.innerHTML = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> DOWNLOAD BADGE`;
@@ -688,39 +591,29 @@ Gaya penulisan: jurnalistik, sedikit puitis, penuh wawasan. Jangan sebut "HatRan
     }, 60);
   }
 
-  // ══════════════════════════════════════════════════════
-  //  SHARE ON X
-  // ══════════════════════════════════════════════════════
+  // ── Share on X ────────────────────────────────────────
   function shareOnX() {
-    if (!currentProfile) { showToast('⚠️ Analisa dulu sebuah username', true); return; }
+    if (!currentProfile) { showToast('⚠️ Analyze a username first', true); return; }
     const { hat, score, followers, engRate } = currentProfile;
-
-    // Visual level bar using unicode blocks
-    const filled = '█'.repeat(hat.level);
-    const empty  = '░'.repeat(6 - hat.level);
-    const levelBar = filled + empty;
-
+    const levelBar = '█'.repeat(hat.level) + '░'.repeat(6 - hat.level);
     const text = [
-      `Baru saja cek rank topi X ku di HatRank! 🎩`,
-      ``,
+      `Just got my X hat ranked by HatRank! 🎩`,``,
       `${hat.emoji}  ${hat.title}`,
       `📊  Level ${hat.level}/6  ${levelBar}`,
-      `⚡  Skor ${score}/100  ·  ENG ${engRate}%`,
-      `👥  ${formatNum(followers)} followers`,
-      ``,
-      `Cek rank topi kamu di hatrank.io 👇`,
+      `⚡  Score ${score}/100  ·  ENG ${engRate}%`,
+      `👥  ${formatNum(followers)} followers`,``,
+      `Check your own hat rank at hatrank.io 👇`,
       `#HatRank #XAnalytics #${hat.title.replace(/\s+/g,'')}`,
     ].join('\n');
-
-    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
-    window.open(tweetUrl, '_blank', 'noopener,noreferrer,width=600,height=520');
-    showToast('✓ Jendela X terbuka — siap share!');
+    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer,width=600,height=520');
+    showToast('✓ X window opened — ready to share!');
   }
 
-  // ── Enter key ────────────────────────────────────────
+  // ── Enter key ─────────────────────────────────────────
   document.getElementById('usernameInput').addEventListener('keydown', e => {
     if (e.key === 'Enter') startAnalysis();
   });
 </script>
 </body>
 </html>
+
